@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMへのバインディング</title>
+</head>
+<body>
+    <h1>FORMバインディング</h1>
+    <form action="/submit" method="post" th:object="${userInput}">
+        <input type="text" th:field="*{account}" placeholder="Account here"><br>
+        <input type="password" th:field="*{password}" placeholder="Password here"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
